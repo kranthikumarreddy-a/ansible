@@ -1,0 +1,11 @@
+- name: Loading the Variable from the another file
+  hosts: local
+  connection: local
+  vars_File:
+  - Varfile.yaml
+  tasks:
+  - name: Load variables from file
+    vars:
+      NAME: Shiva
+    ansible.builtin.debug:
+      msg: "User data is: {{ NAME }}, {{Number}}, {{Village}}"    
