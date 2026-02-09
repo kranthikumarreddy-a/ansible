@@ -1,0 +1,11 @@
+- name: simple variables learing first time in Ansible
+  hosts: local
+  connection: local
+  vars:
+    NAME: "Kranthi"
+    Number: 8499984152
+    Village: "TDML"
+  tasks:
+  - name: Print Hello world
+    ansible.builtin.debug:
+      msg: "User data is: {{ NAME }}, {{Number}}, {{Village}}"    
