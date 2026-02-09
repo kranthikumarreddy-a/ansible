@@ -1,6 +1,6 @@
 - name: This is the simple Hello world Play book
-  hosts: local
-  connection: frontend
+  hosts: frontend
+  connection: local
   tasks:
   - name: Print Hello world
     ansible.builtin.debug:
