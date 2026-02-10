@@ -1,0 +1,10 @@
+ - name: Learning loops in Ansible
+   connection: local
+   tasks:
+   - name: Print facts
+     ansible.builtin.debug:
+       msg: "Hello {{item}}"
+     loop:
+     - Linux
+     - Shell
+     - Ansible
