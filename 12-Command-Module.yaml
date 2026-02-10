@@ -1,0 +1,11 @@
+- name: Gathering facts
+  hosts: local
+  connection: local
+  tasks:
+  - name: This is to check if the command module works
+    ansible.builtin.command: cat /etc/passwd 
+    register: user_data
+
+  - name: This is to check if the command module works
+    ansible.builtin.debug: 
+      msg: "{{ user_data }}"
