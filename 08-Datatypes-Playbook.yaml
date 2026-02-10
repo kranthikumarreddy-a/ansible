@@ -6,7 +6,7 @@
     COURSE: "Devops"
     DURATION: "4 Months"
     TRAINER: "SHIVA REDDY"
-  TOPICS:
+  Topics:
   - Linux
   - Shell
   - Ansible
