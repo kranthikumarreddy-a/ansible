@@ -4,10 +4,10 @@
   become: yes
 
   vars:
-    COURSE: "Devops"
+    COURSE: "Devops" # Map or Dictionary(Key and Value) and representation is: {}
     DURATION: "4 Months"
     TRAINER: "SHIVA REDDY"
-    TOPICS:
+    TOPICS: # List and it's represention is : - or []
       - Linux
       - Shell
       - Ansible
