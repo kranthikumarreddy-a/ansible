@@ -3,7 +3,7 @@
   connection: local
   tasks:
   - name: This is to check if the  module works
-    ansible.builtin.command: cat /etc/passwd > users.txt
+    ansible.builtin.shell: cat /etc/passwd > users.txt
     register: users
 
   - name: Print user data
