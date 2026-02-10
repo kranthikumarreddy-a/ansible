@@ -6,10 +6,10 @@
     COURSE: "Devops"
     DURATION: "4 Months"
     TRAINER: "SHIVA REDDY"
-    TOPICS:
-    - Linux
-    - Shell
-    - Ansible
+  TOPICS:
+  - Linux
+  - Shell
+  - Ansible
 
   tasks:
   - name: This task is related to learn types of Data types
