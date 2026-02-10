@@ -3,7 +3,7 @@
   connection: local
   become: yes
   vars:
-    COURSE: "DevSecOps"
+    COURSE: "Devops"
     DURATION: "4 Months"
     TRAINER: "SHIVA REDDY"
     TOPICS:
