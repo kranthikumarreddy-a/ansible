@@ -2,19 +2,17 @@
   hosts: local
   connection: local
   become: yes
+
   vars:
     COURSE: "Devops"
     DURATION: "4 Months"
     TRAINER: "SHIVA REDDY"
-  Topics:
-  - Linux
-  - Shell
-  - Ansible
+    TOPICS:
+      - Linux
+      - Shell
+      - Ansible
 
   tasks:
-  - name: This task is related to learn types of Data types
-    ansible.builtin.debug:
-      msg:  "{{COURSE}},  {{DevSecOps}}, {{TRAINER}} and {{TOPICS}}"
-
-
-    
+    - name: This task is related to learn types of Data types
+      ansible.builtin.debug:
+        msg: "{{ COURSE }}, {{ DevSecOps }}, {{ TRAINER }} and {{ TOPICS | join(', ') }}"
