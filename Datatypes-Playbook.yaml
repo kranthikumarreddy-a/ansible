@@ -1,0 +1,20 @@
+- name: This is to understand the variable preference from multiple sources
+  hosts: local
+  connection: local
+  become: yes
+  vars:
+    COURSE: "DevSecOps"
+    DURATION: "4 Months"
+    TRAINER: "SHIVA REDDY"
+    TOPICS:
+    - Linux
+    - Shell
+    - Ansible
+
+  tasks:
+  - name: This task is related to learn types of Data types
+    ansible.builtin.debug:
+      msg:  "{{COURSE}},  {{DevSecOps}}, {{TRAINER}} and {{TOPICS}}"
+
+
+    
