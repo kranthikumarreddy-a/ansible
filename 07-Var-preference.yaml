@@ -18,4 +18,12 @@
       NAME: "Ansible from the Task level"
     ansible.builtin.debug:
       msg: "This variable is : {{ NAME }}"
+
+# Variable Preferences
+# 1. Args from command line
+# 2. Taks
+# 3. File(Varfile.yaml)
+# 4. Prompt
+# 5. Play level Variables
+# 6. Inventory 
     
