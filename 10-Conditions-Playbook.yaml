@@ -10,4 +10,4 @@
   - name: Execute the tast if condition is true
     ansible.builtin.debug:  
       msg: "Yes, Number greater than 20"
-    when: Number > 20
+    when: Number | int > 20
