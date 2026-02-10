@@ -8,4 +8,4 @@
 
   - name: Print user data
     ansible.builtin.debug: 
-      msg: "{{ users }}"  
+      msg: "{{ users.stdout }}"  
