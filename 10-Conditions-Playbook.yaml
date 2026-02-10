@@ -1,0 +1,13 @@
+- name: Check if the number is more than 10 or not
+  hosts: local
+  connection: local
+  vars_prompts:
+  - name: Number
+    prompt: "Enter the Number"
+    private: false
+
+  tasks:
+  - name: Execute the tast if condition is true
+    ansible.builtin.debug:  
+      msg: "Yes, Number greater than 20"
+    when: Number > 20
