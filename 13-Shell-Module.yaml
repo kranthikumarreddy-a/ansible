@@ -4,8 +4,8 @@
   tasks:
   - name: This is to check if the  module works
     ansible.builtin.command: cat /etc/passwd > users.txt
-    register: users-name.txt
+    register: users-name
 
   - name: Print user data
     ansible.builtin.debug: 
-      msg: "{{ user.txt }}"  
+      msg: "{{ users-name }}"  
