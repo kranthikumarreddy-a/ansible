@@ -1,7 +1,7 @@
 - name: Check if the number is more than 10 or not
   hosts: local
   connection: local
-  vars_prompts:
+  vars_prompt:
   - name: Number
     prompt: "Enter the Number"
     private: false
