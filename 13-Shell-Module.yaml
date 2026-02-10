@@ -1,0 +1,11 @@
+- name: Learning shell module
+  hosts: local
+  connection: local
+  tasks:
+  - name: This is to check if the  module works
+    ansible.builtin.command: cat /etc/passwd > users.txt
+    register: users.txt
+
+  - name: Print user data
+    ansible.builtin.debug: 
+      msg: "{{ users.txt }}"  
