@@ -1,0 +1,21 @@
+- name: This is to understand the variable preference from multiple sources
+  hosts: local
+  connection: local
+  become: yes
+  vars_files:
+  - Varfile:
+  vars: 
+  - NAME: "Ansiblr from Play"
+    Number: 9966098341
+    Village: "TDML"
+  vars_prompt:
+  - name: NAME
+    prompt: Please enter your name
+    private: false
+  tasks:
+  - name: Print the name
+    vars:
+      NAME: "Ansible from the Task level"
+    ansible.builtin.debug:
+      msg: This variable is : {{ NAME }} 
+    

@@ -1,4 +1,4 @@
-- name: Loading the Variable from the another file
+- name: Loading the Variable  while executing the play book
   hosts: local
   connection: local
   vars_prompt:
