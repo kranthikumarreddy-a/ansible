@@ -1,4 +1,5 @@
  - name: Learning loops in Ansible
+   hosts: local
    connection: local
    tasks:
    - name: Print facts
