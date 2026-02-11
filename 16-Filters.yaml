@@ -4,11 +4,26 @@
   become: yes
 
   vars:
-    Topics: "Linux,Shell,Ansible"   # STRING
+    Topics: "Linux,Shell,Ansible"   # STRING 
     StudentMap:                    # MAP
       Name: Kranthi
       Course: "DevOps"
       Duration: "4 months"
+    
+    StudentList: [      # List of Maps
+        {
+            "key": "Name",
+            "value": "Kranthi"
+        },
+        {
+            "key": "Course",
+            "value": "DevOps"
+        },
+        {
+            "key": "Duration",
+            "value": "4 months"
+        }
+    ]
 
   tasks:
 
@@ -23,3 +38,8 @@
     - name: Map to List
       ansible.builtin.debug:
         msg: "{{ StudentMap | dict2items }}"
+
+    - name: List to Map
+      ansible.builtin.debug:
+        msg: "{{ StudentList | items2dict }}"
+
