@@ -1,29 +1,25 @@
-- name: Manipulating data with the Filters
+- name: Manipulating data with Filters
   hosts: local
   connection: local
-  become: Yes
-  vars: 
-    Topics: Linux, Shell, Ansible # String
-    StudentMap: # Map
+  become: yes
+
+  vars:
+    Topics: "Linux,Shell,Ansible"   # STRING
+    StudentMap:                    # MAP
       Name: Kranthi
-      Course: "Devops
-      Duration: 4 months
+      Course: "DevOps"
+      Duration: "4 months"
 
   tasks:
-  - name: This task is used for learing default with piping # directly use the variables without declaring
-    ansible.builtin.debug:
-      msg: "This information related to, {{ KRANTHI | default('education') }}"
 
-  - name: String to List
-    ansible.builtin.debug:
-      msg: "{{ Topics |  split(',') }}"
+    - name: Learning default filter with piping
+      ansible.builtin.debug:
+        msg: "This information is related to {{ kranthi | default('education') }}"
 
-  - name: Map to List
-    ansible.builtin.debug:
-      msg: "{{ StudentMap | dict2items }}"
-   
+    - name: String to List
+      ansible.builtin.debug:
+        msg: "{{ Topics | split(',') }}"
 
-
-
-
-    
+    - name: Map to List
+      ansible.builtin.debug:
+        msg: "{{ StudentMap | dict2items }}"
