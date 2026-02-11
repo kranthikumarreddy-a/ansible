@@ -12,7 +12,7 @@
   tasks:
   - name: This task is used for converting string to List
     ansible.builtin.debug:
-      msg: "This information related to {{ kranthi | default('education') }}"
+      msg: "This information related to, {{ kranthi | default('education') }}"
    
 
 
