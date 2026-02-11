@@ -45,6 +45,6 @@
 
     - name: Read YAML file content and convert to JSON
       ansible.builtin.set_fact:
-        my_json_data: "{{ lookup('file', 'Loops.yaml') | from_yaml | to_json }}"
+        my_json_data: "{{ lookup('file', '05-Var-file.yaml') | from_yaml | to_json }}"
 
 
