@@ -1,0 +1,21 @@
+- name: Manipulating data with the Filters
+  hosts: local
+  connection: local
+  become: Yes
+  vars: 
+    Topics: Linux, Shell, Ansible # String
+    StudentMap: # Map
+      Name: Kranthi
+      Course: "Devops
+      Duration: 4 months
+
+  tasks:
+  - name: This task is used for converting string to List
+    ansible.builtin.debug:
+      msg: This information related to "{{ kranthi | default('education') }}"
+   
+
+
+
+
+    

@@ -1,0 +1,14 @@
+- name: Learning loops in Ansible
+  hosts: local
+  connection: local
+  tasks:
+  - name: Install the packages with Loop
+    ansible.builtin.package:
+      name: { item.name }
+      state: { item.state }
+    loop: # List of Maps
+    - "{name: nginx, state: present}"
+    - "{name: mysql, state: absent}"
+    - "{name: zip, state: present}"
+
+
